@@ -3,9 +3,6 @@
 # For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 # Bonus: Can you do this in one pass?
 
-k = 17
-data = [10, 15, 3, 7]
-
 
 def add_up_to_number(data, k):
 
@@ -19,4 +16,10 @@ def add_up_to_number(data, k):
     return False
 
 
-print(add_up_to_number(data, k))
+print(add_up_to_number(data=[10, 15, 3, 7], k=17))
+print(add_up_to_number(data=[0, 15, 3, 0], k=0))
+print(add_up_to_number(data=[1, 100, -10, 7, 10], k=0))
+print(add_up_to_number(data=[1, 100, -5, 7, 10, 94], k=95))
+print(add_up_to_number(data=[100, 94, -5, 7, 10, 1], k=95))
+
+print(add_up_to_number(data=[100, 94, -5, 7, 10, 1], k=1000))
