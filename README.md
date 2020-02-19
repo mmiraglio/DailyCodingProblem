@@ -1,7 +1,6 @@
 # Solutions to problems sent by Daily Coding Problem site. #
 
 ## Problem 1: ##
-
 This problem was recently asked by Google.
 
 Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
@@ -10,7 +9,6 @@ For example, given `[10, 15, 3, 7]` and k of 17, return true since 10 + 7 is 17.
 _Bonus: Can you do this in one pass?_
 
 ## Problem 2: ##
-
 This problem was asked by Uber.
 
 Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i.
@@ -19,7 +17,6 @@ For example, if our input was `[1, 2, 3, 4, 5]`, the expected output would be `[
 _Follow-up: what if you can't use division?_
 
 ## Problem 3: ##
-
 This problem was asked by Google.
 
 Given the root to a binary tree, implement `serialize(root)`, which serializes the tree into a string, and `deserialize(s)`, which deserializes the string back into the tree.
@@ -38,6 +35,7 @@ The following test should pass:
 node = Node('root', Node('left', Node('left.left')), Node('right'))
 assert deserialize(serialize(node)).left.left.val == 'left.left'
 ```
+
 ## Problem 4: ##
 This problem was asked by Stripe.
 
