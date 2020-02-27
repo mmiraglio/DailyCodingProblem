@@ -59,9 +59,9 @@ def gfg_product_of_all_numbers(data):
 
     return prod
 
+if __name__ == "__main__":
+    expected = [120, 60, 40, 30, 24]
+    assert gfg_product_of_all_numbers(data=[1, 2, 3, 4, 5]) == expected
 
-expected = [120, 60, 40, 30, 24]
-assert gfg_product_of_all_numbers(data=[1, 2, 3, 4, 5]) == expected
-
-expected = [2, 3, 6]
-assert gfg_product_of_all_numbers(data=[3, 2, 1]) == expected
+    expected = [2, 3, 6]
+    assert gfg_product_of_all_numbers(data=[3, 2, 1]) == expected

@@ -28,10 +28,11 @@ def my_first_missing_positive_number(arr):
     # so the result is the value of the last element in the array + 1.
     return positives[i] + 1
 
-assert my_first_missing_positive_number([3, 4, -1, 1]) == 2
-assert my_first_missing_positive_number([1, 2, 0]) == 3
-assert my_first_missing_positive_number([-3, -2, -1, 0, 0, -500]) == 1
-assert my_first_missing_positive_number( [1, -10, 12, 24, 2, 2, 7]) == 3
-assert my_first_missing_positive_number([0]) == 1
-assert my_first_missing_positive_number([1]) == 2
-assert my_first_missing_positive_number([2]) == 1
+if __name__ == "__main__":
+    assert my_first_missing_positive_number([3, 4, -1, 1]) == 2
+    assert my_first_missing_positive_number([1, 2, 0]) == 3
+    assert my_first_missing_positive_number([-3, -2, -1, 0, 0, -500]) == 1
+    assert my_first_missing_positive_number( [1, -10, 12, 24, 2, 2, 7]) == 3
+    assert my_first_missing_positive_number([0]) == 1
+    assert my_first_missing_positive_number([1]) == 2
+    assert my_first_missing_positive_number([2]) == 1

@@ -24,4 +24,5 @@ def custom_func():
     print("I was executed!")
 
 
-set_interval(custom_func, 2500)
+if __name__ == "__main__":
+    set_interval(custom_func, 2500)

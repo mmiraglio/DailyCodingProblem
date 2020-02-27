@@ -46,12 +46,12 @@ def so_add_up_to_number(data, k):
     print("No numbers add up to {}.".format(k))
     return False
 
+if __name__ == "__main__":
+    # Should return True
+    assert so_add_up_to_number(data=[10, 15, 3, 7], k=17)
+    assert so_add_up_to_number(data=[0, 15, 3, 0], k=0)
+    assert so_add_up_to_number(data=[1, 100, -10, 7, 10], k=0)
+    assert so_add_up_to_number(data=[100, 94, -5, 7, 10, 1], k=95)
 
-# Should return True
-assert so_add_up_to_number(data=[10, 15, 3, 7], k=17)
-assert so_add_up_to_number(data=[0, 15, 3, 0], k=0)
-assert so_add_up_to_number(data=[1, 100, -10, 7, 10], k=0)
-assert so_add_up_to_number(data=[100, 94, -5, 7, 10, 1], k=95)
-
-# Should return False
-assert ~so_add_up_to_number(data=[100, 94, -5, 7, 10, 1], k=1000)
+    # Should return False
+    assert ~so_add_up_to_number(data=[100, 94, -5, 7, 10, 1], k=1000)

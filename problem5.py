@@ -23,6 +23,6 @@ def cdr(f):
 
     return f(last)
 
-
-assert car(cons(3, 4)) == 3 
-assert cdr(cons(3, 4)) == 4
+if __name__ == "__main__":
+    assert car(cons(3, 4)) == 3 
+    assert cdr(cons(3, 4)) == 4
