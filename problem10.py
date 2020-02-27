@@ -2,11 +2,6 @@
 # Implement a job scheduler which takes in a function f and an integer n, and calls f after n milliseconds.
 
 import datetime as dt
-# >>> a = datetime.datetime.now()
-# >>> b = datetime.datetime.now()
-# >>> c = b - a
-# int(delta.total_seconds() * 1000) # milliseconds
-
 
 def set_interval(f, n):
     # Perform some basic validations
