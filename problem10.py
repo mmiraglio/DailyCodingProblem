@@ -41,3 +41,26 @@ if __name__ == "__main__":
     while True:
         if input('Press (q)uit to exit the program)') == "q":
             break
+
+
+
+# A nice solution to this problem can be found at 
+# https://stackoverflow.com/questions/2697039/python-equivalent-of-setinterval#14035296
+'''
+class setInterval :
+    def __init__(self,interval,action) :
+        self.interval=interval
+        self.action=action
+        self.stopEvent=threading.Event()
+        thread=threading.Thread(target=self.__setInterval)
+        thread.start()
+
+    def __setInterval(self) :
+        nextTime=time.time()+self.interval
+        while not self.stopEvent.wait(nextTime-time.time()) :
+            nextTime+=self.interval
+            self.action()
+
+    def cancel(self) :
+        self.stopEvent.set()
+'''
