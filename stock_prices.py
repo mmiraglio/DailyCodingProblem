@@ -6,6 +6,8 @@ def get_max_profit(stock_prices):
     Given a list of stock prices returns the maximum profit that could have been obtained by an investor 
     buying a single stock at the lowest price and selling at the max price.
     """
+    if len(stock_prices) < 2:
+        raise ValueError('Getting a profit requires at least 2 prices')
 
     # Sorts the list of Stock Prices keeping the original indexes. It's important to keep
     # this information because it represents the time of the day that the stock reachead that price.
@@ -33,16 +35,26 @@ def get_max_profit(stock_prices):
     # So we move to the next Max in the list (0, 10) and compare it against the rest of the elements
     # [(5, 9), (3, 8), (1, 7), (2, 5)] (starting again for the last element, the lowest price of the day)
     l = len(stock_prices_sorted)
-    partial = [0] * l  # Array to maintain our partial anwsers
+    partials = [None] * l  # Array to maintain our partial anwsers
     for i in range(l - 1):
         max_i, max_value = stock_prices_sorted[i]
         for y in range(l - 1,  i, -1):
             min_i, min_value = stock_prices_sorted[y]
             if max_i > min_i:
-                partial[i] = max_value - min_value
+                partials[i] = max_value - min_value
                 break
 
-    return max(partial)
+    # We are not interested in None values
+    partials = [n for n in partials if n is not None]
+
+    # If the algorithm was able to find a suitable moment
+    # to sell the stock the spread will be in the list of
+    # partials, if not just try to minimze the losses (for the
+    # case prices just went down during the day)
+    if partials:
+        return max(partials)
+    else:
+        return stock_prices_sorted[1][1] - stock_prices_sorted[0][1]
 
 
 if __name__ == "__main__":
@@ -61,3 +73,8 @@ if __name__ == "__main__":
     stock_prices = [25, 30, 12, 20, 5, 12]
     # Returns 8 (buying for $12 and selling for $20)
     assert get_max_profit(stock_prices) == 8
+
+    stock_prices = [50, 45, 40, 30, 20, 10]
+    # Stocks just went down, so the best it can be done is
+    # minimize the losses :(
+    assert get_max_profit(stock_prices) == -5
