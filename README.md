@@ -106,3 +106,20 @@ get_max_profit(stock_prices)
 # Returns 6 (buying for $5 and selling for $11)
 ````
 No "shorting" —you need to buy before you can sell. Also, you can't buy and sell in the same time step— at least 1 minute has to pass. [Taken from Interview Cake!](https://www.interviewcake.com/question/python/stock-price)
+
+## Braces/Brackets/Parentheses validator ##
+You're working with an intern that keeps coming to you with JavaScript code that won't run because the braces, brackets, and parentheses are off. To save you both some time, you decide to write a braces/brackets/parentheses validator.
+
+Let's say:
+
+* '(', '{', '[' are called "openers."
+* ')', '}', ']' are called "closers."
+
+Write an efficient function that tells us whether or not an input string's openers and closers are properly nested.
+Examples:
+
+ * "{ [ ] ( ) }" should return True
+ * "{ [ ( ] ) }" should return False
+ * "{ [ }" should return False
+
+[Taken from Interview Cake!](https://www.interviewcake.com/question/python3/bracket-validator)
